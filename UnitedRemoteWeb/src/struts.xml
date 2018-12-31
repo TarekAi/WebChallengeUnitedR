@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE struts PUBLIC  
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+        "http://struts.apache.org/dtds/struts-2.0.dtd">  
+    <struts>  
+        <package name="default" namespace="/"  extends="struts-default" >  
+            <action name="login" class="actions.AuthenticationAction" method="login">  
+                <result name="success">/home.jsp</result>
+                <result name="error">/error.jsp</result>  
+                  
+            </action>  
+            
+             <action name="like" class="actions.AuthenticationAction" method="like">  
+             	<result name="success">/home.jsp</result> 
+             </action> 
+             
+             <action name="dislike" class="actions.AuthenticationAction" method="dislike">  
+             	<result name="success">/home.jsp</result>
+             </action>
+
+			<action name="remove" class="actions.AuthenticationAction" method="remove">  
+             	<result name="success">/preferred.jsp</result>
+            </action> 
+            
+            <action name="logout" class="actions.AuthenticationAction" method="logout">  
+                <result name="success">/login.jsp</result>
+            </action>
+            
+        </package> 
+        
+        
+         <package name="register" namespace="/"  extends="struts-default" >  
+            <action name="register" class="actions.Registration" method="register">  
+                <result name="success">/login.jsp</result>
+                <result name="error">/error.jsp</result>  
+            </action> 
+        </package> 
+         
+    </struts>  
+ 
